@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(201,209,134,1) 0%, rgba(211,215,174,1) 24%, rgba(230,234,196,1) 100%);
+}
+
+/* Background styling */
+
+.background {
+    z-index: -10;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30vh;
+    background: linear-gradient(90deg, rgba(102,77,50,1) 1%, rgba(125,91,55,1) 24%, rgba(151,106,58,1) 100%);
+    z-index: -2;
+}
+
+.closet {
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+    width: 10vw;
+    height: 65vh;
+    background-color: rgb(50, 135, 161);
+}
+
+.openner {
+    position: relative;
+    width: 1vw;
+    height: 8vh;
+    left: 10vw;
+    bottom: -30vh;
+    background-color: rgb(43, 123, 163);
+}
+
+.carpet {
+    width: 35vw;
+    height: 10vh;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(247,225,183,1) 0%, rgba(255,235,205,1) 100%);
+    position: absolute;
+    bottom: 10vh;
+    right: 28vw;
+}
+
+.window {
+    width: 30vw;
+    height: 32vh;
+    background-color: rgb(246, 243, 237);
+    position: absolute;
+    right: 5vw;
+    top: 17vh;
+}
+
+.outside {
+    width: 27vw;
+    height: 18vh;
+    background-color: rgb(160, 206, 242);
+    position: relative;
+    left: 1.5vw;
+    top: 2vh;
+}
+
+/* Cat styling */
+
+.cat-head {
+    position: absolute;
+    right: 0;
+    left: 650px;
+    top: 200px;
+    bottom: 0;
+    background-color: black;
+    width: 200px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.left-ear {
+    position: absolute;
+    z-index: 1;
+    left: -25px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 40px;
+    transform: rotate(-60deg);
+    border-left: 35px solid;
+    border-right: 35px solid;
+    border-bottom: 70px solid black;
+}
+
+
