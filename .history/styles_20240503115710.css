@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    background-color: rgb(230, 234, 196);
+}
+
+.background {
+    z-index: -10;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30vh;
+    background-color: rgb(151, 106, 58);
+    z-index: -2;
+}
+
+.closet {
+    position: absolute;
+    bottom: 10vh;
+    left: 0;
+    width: 10vw;
+    height: 60vh;
+    background-color: rgb(196, 183, 164);
+}
+
+
+
+
+
