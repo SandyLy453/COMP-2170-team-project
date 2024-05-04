@@ -557,7 +557,7 @@ body {
     height: 130px;
     background-color: black;
     border-radius: 30% 30% 30% 120%;
-    z-index: -1;
+    z-index: -2;
 }
 
 .left-arm {

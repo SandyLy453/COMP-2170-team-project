@@ -113,7 +113,7 @@ body {
     height: 21vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -3;
+    z-index: -2;
     position: relative;
     top: 4vh;
     left: 0.25vw;
@@ -127,7 +127,7 @@ body {
     height: 21vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -4;
+    z-index: -3;
     position: relative;
     top: -17.5vh;
     left: 4vw;
@@ -141,7 +141,7 @@ body {
     height: 20vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -5;
+    z-index: -4;
     position: relative;
     top: -37vh;
     left: -1.5vw;
@@ -155,7 +155,7 @@ body {
     height: 20vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -6;
+    z-index: -5;
     position: relative;
     top: -57vh;
     left: 5.75vw;
@@ -557,7 +557,7 @@ body {
     height: 130px;
     background-color: black;
     border-radius: 30% 30% 30% 120%;
-    z-index: -1;
+    z-index: -2;
 }
 
 .left-arm {
@@ -630,7 +630,7 @@ body {
 /*Menu bar*/
 
 .heading{
-    background-color:rgba(255,255,255,0.5);
+    background-color:white;
     padding:8px;
     border:2px solid #1B512D;
     border-radius: 10px;
@@ -652,7 +652,7 @@ body {
 }
 
 .shape {
-    background: linear-gradient(45deg, #88D5BF 0%, #f8f05d 100%);
+    background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   height: 300px;
@@ -672,51 +672,211 @@ body {
 @keyframes morph {
   0% {
 			border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-			background: linear-gradient(45deg, #e27fcb  0%,#f8f05d 100%);
+			background: linear-gradient(45deg, #88D5BF 0%,#5D6BF8 100%);
 	} 
 	
 	50% {
 			border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-			background: linear-gradient(45deg, #e27fcb 0%, #f8f05d 100%);
+			background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%);
 	}
   
 	100% {
 		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-		background: linear-gradient(45deg, #e27fcb  0%, #f8f05d 100%);
+		background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
 	} 
 }
 
-.b{
-    background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid;
-    color: white;
-    &:hover {
-      background-color: rgba(rgb(255, 255, 255), 1);
-      color: #473527;
-    }
-    color: black;
-    cursor: pointer;
-    display: block;
-    font-size:18px;
-    font-weight: 400;
-    line-height: 45px;
-    margin: 10px;
-    padding: 0, 10px;
-    width:fit-content;
-    position: relative;
-    text-transform: uppercase;
-    border: 0 solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-    outline: 3px solid;
-    outline-color: rgba(244, 111, 2, 0.5);
-    outline-offset: 0px;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+:root {
+	--lerp-0: 1;
+  --lerp-1: 0.5625;
+  --lerp-2: 0.25;
+  --lerp-3: 0.0625;
+  --lerp-4: 0;
 }
 
-  .b:hover {
-    border: 1px solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 10px;
-    text-shadow: 1px 1px 2px #427388; 
-  }
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+h1 {
+  position: fixed;
+  bottom: var(--size-4);
+  right: var(--size-4);
+  margin: 0;
+  color: var(--gray-0);
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	font-family:  'Google Sans', sans-serif, system-ui;
+	background: var(--gradient-1);
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5625;
+  --lerp-2: 0.25;
+  --lerp-3: 0.0625;
+  --lerp-4: 0;
+}
+
+.blocks {
+	display: flex;
+	list-style-type: none;
+	padding: var(--size-2);
+	border-radius: var(--radius-3);
+	gap: var(--size-4);
+	background: hsl(0 0% 100% / 0.5);
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	backdrop-filter: blur(10px);
+}
+
+.blocks:hover {
+	--show: 1;
+}
+
+.block {
+	width: 48px;
+	height: 48px;
+	display: grid;
+	place-items: center;
+	align-content: center;
+	transition: flex 0.2s;
+	flex: calc(0.2 + (var(--lerp, 0) * 1.5));
+	position: relative;
+}
+
+.block:after {
+	content: '';
+	width: 5%;
+	aspect-ratio: 1;
+	background: var(--text-1);
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	border-radius: var(--radius-3);
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.block:before {
+	content: '';
+	position: absolute;
+	width: calc(100% + var(--size-4));
+	bottom: 0;
+	aspect-ratio: 1 / 2;
+	left: 50%;
+	transition: transform 0.2s;
+	transform-origin: 50% 100%;
+	transform: translateX(-50%) scaleY(var(--show, 0));
+	z-index: -1;
+}
+
+.block .block__item {
+  transition: outline 0.2s;
+  outline: transparent var(--size-1) solid;
+}
+
+:is(.block:hover, .block:focus-visible) .block__item {
+	outline: var(--surface-1) var(--size-1) solid;
+}
+
+.block {
+	outline: none;
+}
+
+.block__item {
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: var(--radius-3);
+	background: var(--bg), var(--surface-1);
+	display: inline-block;
+	transition: transform 0.2s;
+	transform-origin: 50% 100%;
+	position: relative;
+	transform: translateY(calc(var(--lerp) * -75%));
+}
+
+.block__item:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	aspect-ratio: 1;
+	border-left: var(--size-2) solid white;
+	border-top: var(--size-2) solid white;
+	border-radius: var(--radius-3);
+	mask: linear-gradient(135deg, black, transparent 50%);
+}
+
+@media(prefers-color-scheme: dark) {
+	body {
+		background: var(--gradient-23);
+	}
+	.blocks {
+		background: hsl(0 0% 0% / 0.5);
+	}
+}
+
+
+:is(.block:hover, .block:focus-visible) {
+  --lerp: var(--lerp-0);
+  z-index: 5;
+}
+.block:has( + :is(.block:hover, .block:focus-visible)),
+:is(.block:hover, .block:focus-visible) + .block {
+  --lerp: var(--lerp-1);
+  z-index: 4;
+}
+.block:has( + .block + :is(.block:hover, .block:focus-visible)),
+:is(.block:hover, .block:focus-visible) + .block + .block {
+  --lerp: var(--lerp-2);
+  z-index: 3;
+}
+.block:has( + .block + .block + :is(.block:hover, .block:focus-visible)),
+:is(.block:hover, .block:focus-visible) + .block + .block + .block {
+  --lerp: var(--lerp-3);
+  z-index: 2;
+}
+.block:has( + .block + .block + .block + :is(.block:hover, .block:focus-visible)),
+:is(.block:hover, .block:focus-visible) + .block + .block + .block + .block {
+  --lerp: var(--lerp-4);
+  z-index: 1;
+}
+
+
+body:has(a[style="--bg: var(--gradient-1);"]:focus) {
+	background: var(--gradient-1);
+}
+body:has(a[style="--bg: var(--gradient-2);"]:focus) {
+	background: var(--gradient-2);
+}
+body:has(a[style="--bg: var(--gradient-3);"]:focus) {
+	background: var(--gradient-3);
+}
+body:has(a[style="--bg: var(--gradient-4);"]:focus) {
+	background: var(--gradient-4);
+}
+body:has(a[style="--bg: var(--gradient-5);"]:focus) {
+	background: var(--gradient-5);
+}
+body:has(a[style="--bg: var(--gradient-6);"]:focus) {
+	background: var(--gradient-6);
+}
+body:has(a[style="--bg: var(--gradient-7);"]:focus) {
+	background: var(--gradient-7);
+}
+body:has(a[style="--bg: var(--gradient-8);"]:focus) {
+	background: var(--gradient-8);
+}
+body:has(a[style="--bg: var(--gradient-9);"]:focus) {
+	background: var(--gradient-9);
+}
