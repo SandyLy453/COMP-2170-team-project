@@ -113,7 +113,7 @@ body {
     height: 21vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -3;
+    z-index: -2;
     position: relative;
     top: 4vh;
     left: 0.25vw;
@@ -127,7 +127,7 @@ body {
     height: 21vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -4;
+    z-index: -3;
     position: relative;
     top: -17.5vh;
     left: 4vw;
@@ -141,7 +141,7 @@ body {
     height: 20vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -5;
+    z-index: -4;
     position: relative;
     top: -37vh;
     left: -1.5vw;
@@ -155,7 +155,7 @@ body {
     height: 20vh;
     width: 2vw;
     background: linear-gradient(0deg, rgba(55,148,42,1) 0%, rgba(159,219,53,1) 100%);
-    z-index: -6;
+    z-index: -5;
     position: relative;
     top: -57vh;
     left: 5.75vw;
@@ -286,11 +286,6 @@ body {
 
 /* Cat styling */
 
-.cat{
-    position:relative;
-    top:300px;
-    left:50px
-}
 .cat-head {
     position: absolute;
     right: 0;
@@ -557,7 +552,7 @@ body {
     height: 130px;
     background-color: black;
     border-radius: 30% 30% 30% 120%;
-    z-index: -1;
+    z-index: -2;
 }
 
 .left-arm {
@@ -630,7 +625,7 @@ body {
 /*Menu bar*/
 
 .heading{
-    background-color:rgba(255,255,255,0.5);
+    background-color:white;
     padding:8px;
     border:2px solid #1B512D;
     border-radius: 10px;
@@ -642,17 +637,19 @@ body {
     font-size:30px;
 }
 
-.choose {
+.choose{
+    background-color: #FDFAEC;
     padding: 20px;
     text-align: center;
     display:flex;
     flex-wrap: wrap;
-    width: 15rem;
-    justify-content: center;
+    width:15rem;
+    border:2px solid #1B512D;
+    border-radius: 10px;
 }
 
 .shape {
-    background: linear-gradient(45deg, #88D5BF 0%, #f8f05d 100%);
+ 	background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
   animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   height: 300px;
@@ -661,62 +658,37 @@ body {
   z-index: 5;
   padding: 20px;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-  top: 400px;
-  left: 250px
+  display:flex;
+  flex-wrap: wrap;
 }
 
 @keyframes morph {
   0% {
 			border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-			background: linear-gradient(45deg, #e27fcb  0%,#f8f05d 100%);
+			background: linear-gradient(45deg, #88D5BF 0%,#5D6BF8 100%);
 	} 
 	
 	50% {
 			border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
-			background: linear-gradient(45deg, #e27fcb 0%, #f8f05d 100%);
+			background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%);
 	}
   
 	100% {
 		border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
-		background: linear-gradient(45deg, #e27fcb  0%, #f8f05d 100%);
+		background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
 	} 
 }
 
-.b{
-    background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid;
-    color: white;
-    &:hover {
-      background-color: rgba(rgb(255, 255, 255), 1);
-      color: #473527;
-    }
-    color: black;
-    cursor: pointer;
-    display: block;
-    font-size:18px;
-    font-weight: 400;
-    line-height: 45px;
-    margin: 10px;
-    padding: 0, 10px;
-    width:fit-content;
-    position: relative;
-    text-transform: uppercase;
-    border: 0 solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-    outline: 3px solid;
-    outline-color: rgba(244, 111, 2, 0.5);
-    outline-offset: 0px;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-}
 
-  .b:hover {
-    border: 1px solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 10px;
-    text-shadow: 1px 1px 2px #427388; 
-  }
+.b{
+    background-color: white;
+    border:2px solid #F09D51;
+    border-radius: 10px;
+    color:#000000;
+    padding: 5px;
+    font-size: 25px;
+    margin: 10px;
+    font-family: 'Courgette', cursive;;
+   height:30px;
+
+}
