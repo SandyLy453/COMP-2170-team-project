@@ -287,9 +287,9 @@ body {
 /* Cat styling */
 
 .cat{
-    position:relative;
-    top:300px;
-    left:50px
+    position:absolute;
+    top:25px;
+    left:120px
 }
 .cat-head {
     position: absolute;
@@ -653,20 +653,20 @@ body {
 
 .shape {
     background: linear-gradient(45deg, #88D5BF 0%, #f8f05d 100%);
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 300px;
-  transition: all 1s ease-in-out;
-  width: 300px;
-  z-index: 5;
-  padding: 20px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-  top: 400px;
-  left: 250px
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 300px;
+    transition: all 1s ease-in-out;
+    width: 300px;
+    z-index: 5;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 300px;
 }
 
 @keyframes morph {
