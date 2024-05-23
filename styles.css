@@ -11,8 +11,6 @@
     background: linear-gradient(90deg, rgba(201,209,134,1) 0%, rgba(211,215,174,1) 24%, rgba(230,234,196,1) 100%);
 }
 
-<<<<<<< Updated upstream
-=======
 .main-area {
     margin: 0;
     width: 100vw;
@@ -21,7 +19,6 @@
     box-sizing: border-box;
 }
 
->>>>>>> Stashed changes
 /* Background styling */
 
 .background {
@@ -303,12 +300,6 @@
 
 /* Cat styling */
 
-<<<<<<< Updated upstream
-.cat{
-    position:relative;
-    top:300px;
-    left:50px
-=======
 .character {
     position: absolute;
     bottom: 70vh; 
@@ -319,8 +310,8 @@
 
 .cat{
     position:absolute;
->>>>>>> Stashed changes
 }
+
 .cat-head {
     position: absolute;
     right: 0;
@@ -749,10 +740,8 @@
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 10px;
     text-shadow: 1px 1px 2px #427388; 
-<<<<<<< Updated upstream
   }
-=======
-}
+
   
   .form {
     position: absolute;
@@ -945,4 +934,3 @@
 
 
 
->>>>>>> Stashed changes

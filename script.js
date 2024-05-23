@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
 const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
-=======
 const bodyColors = ["black", "#000066", "tomato", "#993300", "#5c5c3d"];
 const earColors = ["black", "pink", "gray", "white", "#993300"];
 const eyeColors = ["black", "#99ccff", "#ff999f", "#993300"];
@@ -110,7 +108,6 @@ saveButton.addEventListener('click', function (e) {
 
 
 
->>>>>>> Stashed changes
 
 const bottoms = ["bottom1","bottom2","bottom3","bottom4", "bottom5"]
 
