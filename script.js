@@ -67,10 +67,49 @@ function changeFrontLegs() {
 }
 
 
+var input = document.querySelector('.form');
+var search = document.querySelector('input');
+var button = document.querySelector('.open');
+var saveButton = document.querySelector('.save');
+var displayName = document.getElementById('displayName');
+
+button.addEventListener('click', function (e) {
+    e.preventDefault();
+    input.classList.toggle('active');
+});
+
+search.addEventListener('focus', function () {
+    input.classList.add('focus');
+});
+
+search.addEventListener('blur', function () {
+    if (search.value.length !== 0) {
+        input.classList.add('focus');
+    } else {
+        input.classList.remove('focus');
+    }
+});
+
+search.addEventListener('input', function () {
+    if (search.value.length !== 0) {
+        saveButton.style.display = 'block';
+    } else {
+        saveButton.style.display = 'none';
+    }
+});
+
+saveButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    displayName.textContent = search.value;
+    search.value = '';
+    saveButton.style.display = 'none';
+    input.classList.remove('focus');
+});
 
 
 
 
+const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
 
 
 
