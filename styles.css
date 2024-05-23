@@ -1,10 +1,27 @@
-body {
+* {
+    outline: none;
+    border: none;
+    padding: 0;
+  }
+  
+  body {
     margin: 0;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(90deg, rgba(201,209,134,1) 0%, rgba(211,215,174,1) 24%, rgba(230,234,196,1) 100%);
 }
 
+<<<<<<< Updated upstream
+=======
+.main-area {
+    margin: 0;
+    width: 100vw;
+    max-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+>>>>>>> Stashed changes
 /* Background styling */
 
 .background {
@@ -33,11 +50,11 @@ body {
 }
 
 .openner {
-    position: relative;
+    position: absolute;
     width: 0.75vw;
     height: 8vh;
     left: 10vw;
-    bottom: -30vh;
+    bottom:25vh;
     background-color: rgb(189, 147, 97);
     border: 1px solid rgb(175, 122, 75);
     border-radius: 0 5px 5px 0;
@@ -286,10 +303,23 @@ body {
 
 /* Cat styling */
 
+<<<<<<< Updated upstream
 .cat{
     position:relative;
     top:300px;
     left:50px
+=======
+.character {
+    position: absolute;
+    bottom: 70vh; 
+    left: 15vw; 
+    transform: translate(-50%, 0); 
+    z-index: 99;
+}
+
+.cat{
+    position:absolute;
+>>>>>>> Stashed changes
 }
 .cat-head {
     position: absolute;
@@ -719,4 +749,200 @@ body {
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 10px;
     text-shadow: 1px 1px 2px #427388; 
+<<<<<<< Updated upstream
   }
+=======
+}
+  
+  .form {
+    position: absolute;
+    margin: 150px auto 0;
+    width: 300px;
+    z-index:99;
+    top: 100px;
+    left: 75rem;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .form:before {
+    content: ' ';
+    position: absolute;
+    left: 25px;
+    top: 14px;
+    width: 2px;
+    height: 36px;
+    transform: scale(0);
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+  }
+  
+  .active:before {
+    transform: scale(1);
+    transition-delay: 0.3s;
+    animation: 0.6s cubic-bezier(.87, -.41, .19, 1.44) 0.5s infinite forwards focus;
+  }
+  
+  input {
+    border-radius: 36px;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+    z-index:99;
+    font-family: monospace;
+    font-size: 16pt;
+    display:block;
+  }
+  
+  .active input {
+    width: 100%;
+    padding-left: 25px;
+    border-radius: 36px;
+  }
+  
+  .label{
+    font-family: monospace;
+    font-size: 16pt;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .open {
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    transition: all 0.5s cubic-bezier(.87, -.41, .19, 1.44);
+    z-index:100;
+  }
+  
+  .open:after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    background: rgb(254, 111, 117);
+    border-radius: 50%;
+  }
+  
+  .open:before {
+    content: ' ';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    right: 0;
+    top: 20px;
+    transform: scale(0);
+    transform-origin: left top;
+    margin: 0 auto;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.8s ease;
+  }
+  
+  .active .open {
+    transform: translateX(260px);
+  }
+  
+  .active .open:before {
+    transform: scale(1);
+  }
+  
+  .focus:before {
+    transform: scale(0);
+    animation: none;
+  }
+
+  #displayName {
+    margin-top: 100px;
+    font-family: monospace;
+    font-size: 20pt;
+    display:block;
+    position: absolute;
+    top:10rem;
+    left: 62rem;
+    text-transform: uppercase ;
+  }
+
+.save{
+    display: none;
+    position:relative;
+    margin-top: 6rem;
+    padding-top: 2rem;
+    color:black;
+    border: none;
+    cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  color: white;
+  background-color: black;
+  box-shadow: 4px 4px 0 rgba(dodgerblue, 0.2);
+  font-family: monospace;
+  font-size: 16pt;
+  border-radius: 5px;
+
+  
+  &:active {
+    transform: translateY(1px);
+  }
+
+    &:focus {
+        outline: 3px solid dodgerblue;
+        outline-offset: 2px;
+      }
+      
+
+
+}
+  @keyframes focus {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+/* Cat location */
+
+
+
+@media screen and (min-height: 1000px) {
+    .character {
+        scale: 180%;
+        bottom: 90vh;
+        left: 5vw;
+    }
+}
+
+@media screen and (min-height: 576px) and (max-height: 799px) {
+    .character {
+        scale: 110%;
+        bottom: 105vh;
+        left: 2.5vw;
+    }
+}
+
+@media screen and (min-height: 800px) and (max-height: 999px) {
+    .character {
+        scale: 120%;
+        bottom: 110vh;
+        left: 0vw;
+    }
+}
+
+
+
+
+>>>>>>> Stashed changes
