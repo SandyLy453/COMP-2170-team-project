@@ -1,4 +1,3 @@
-const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
 const bodyColors = ["black", "#000066", "tomato", "#993300", "#5c5c3d"];
 const earColors = ["black", "pink", "gray", "white", "#993300"];
 const eyeColors = ["black", "#99ccff", "#ff999f", "#993300"];
@@ -66,6 +65,8 @@ function changeFrontLegs() {
     frontLegs.style.backgroundColor = frontLegColors[currentIndex];
     });
 }
+
+
 var input = document.querySelector('.form');
 var search = document.querySelector('input');
 var button = document.querySelector('.open');
@@ -109,9 +110,7 @@ saveButton.addEventListener('click', function (e) {
 
 
 
-const bottoms = ["bottom1","bottom2","bottom3","bottom4", "bottom5"]
 
-const accessories = ["acc1","acc2","acc3","acc4", "acc5"]
 
 
 

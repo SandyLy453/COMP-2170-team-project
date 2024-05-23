@@ -1,22 +1,21 @@
+body {
+    margin: 0;
+    width: 100vw;
+    max-height: 100vh;
+    background: linear-gradient(90deg, rgba(201,209,134,1) 0%, rgba(211,215,174,1) 24%, rgba(230,234,196,1) 100%);
+}
+
 * {
     outline: none;
     border: none;
     padding: 0;
   }
-  
-  body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(201,209,134,1) 0%, rgba(211,215,174,1) 24%, rgba(230,234,196,1) 100%);
-}
 
 .main-area {
     margin: 0;
     width: 100vw;
     max-height: 100vh;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Background styling */
@@ -24,6 +23,8 @@
 .background {
     z-index: -100;
     overflow:hidden;
+    max-height: 100vh;
+    margin-bottom: 0;
 }
 
 .floor {
@@ -33,6 +34,7 @@
     height: 30vh;
     background: linear-gradient(90deg, rgba(102,77,50,1) 1%, rgb(142, 103, 61) 15%, rgba(151,106,58,1) 100%);
     z-index: -2;
+    margin-bottom: 0;
 }
 
 .closet {
@@ -47,11 +49,11 @@
 }
 
 .openner {
-    position: absolute;
+    position: relative;
     width: 0.75vw;
     height: 8vh;
     left: 10vw;
-    bottom:25vh;
+    bottom: -30vh;
     background-color: rgb(189, 147, 97);
     border: 1px solid rgb(175, 122, 75);
     border-radius: 0 5px 5px 0;
@@ -59,7 +61,7 @@
 
 .carpet {
     width: 35vw;
-    height: 10vh;
+    height: 13vh;
     border-radius: 50%;
     background: linear-gradient(90deg, rgba(247,225,183,1) 0%, rgba(255,235,205,1) 100%);
     position: absolute;
@@ -107,8 +109,9 @@
 
 .leaves {
     position: relative;
-    top: 60vh;
-    left: 0.5vw;
+    top: 5vh;
+    left: 0.75vw;
+    max-height: 50vh;
 }
 
 .plant {
@@ -184,6 +187,7 @@
     left: 25vw;
     top: 15vh;
     z-index: -10;
+    max-height: 70vh;
 }
 
 .pictures-one {
@@ -298,20 +302,21 @@
 
 
 
+
+
 /* Cat styling */
 
 .character {
     position: absolute;
-    bottom: 70vh; 
+    bottom: 90vh; 
     left: 15vw; 
     transform: translate(-50%, 0); 
-    z-index: 99;
+    z-index: 45;
 }
 
 .cat{
-    position:absolute;
+    position:relative;
 }
-
 .cat-head {
     position: absolute;
     right: 0;
@@ -437,13 +442,6 @@
     border-bottom: 20px solid rgb(206, 144, 154);
 }
 
-/* .blush {
-    width: 35px;
-    height: 35px;
-    background-color: rgb(206, 144, 154);
-    border-radius: 100px;
-} */
-
 .left-blush {
     position: absolute;
     width: 35px;
@@ -501,7 +499,7 @@
 .whisker-left-top {
     position: absolute;
     top: 110px;
-    left: -30px;
+    left: -45px;
     transform: rotate(5deg);
     width: 100px;
     height: 1px;
@@ -511,7 +509,7 @@
 .whisker-left-middle {
     position: absolute;
     top: 120px;
-    left: -30px;
+    left: -45px;
     transform: rotate(0deg);
     width: 100px;
     height: 1px;
@@ -521,7 +519,7 @@
 .whisker-left-bottom {
     position: absolute;
     top: 130px;
-    left: -30px;
+    left: -45px;
     transform: rotate(-5deg);
     width: 100px;
     height: 1px;
@@ -531,7 +529,7 @@
 .whisker-right-top {
     position: absolute;
     top: 110px;
-    left: 125px;
+    left: 135px;
     transform: rotate(-5deg);
     width: 100px;
     height: 1px;
@@ -541,7 +539,7 @@
 .whisker-right-middle {
     position: absolute;
     top: 120px;
-    left: 125px;
+    left: 135px;
     transform: rotate(0deg);
     width: 100px;
     height: 1px;
@@ -551,7 +549,7 @@
 .whisker-right-bottom {
     position: absolute;
     top: 130px;
-    left: 125px;
+    left: 135px;
     transform: rotate(5deg);
     width: 100px;
     height: 1px;
@@ -560,6 +558,7 @@
 
 .cat-body {
     position: absolute;
+    z-index: -1;
     width: 180px;
     height: 200px;
     border-left: 80px;
@@ -573,12 +572,19 @@
     border-bottom-right-radius: 80%;
 }
 
+.bottom {
+    position: absolute;
+    z-index: -3;
+    top: 345px;
+    left: 655px;
+}
+
 .arm {
     width: 50px;
     height: 130px;
     background-color: black;
     border-radius: 30% 30% 30% 120%;
-    z-index: -1;
+    z-index: -3;
 }
 
 .left-arm {
@@ -604,6 +610,7 @@
     border-left: 100px;
     border-right: 100px;
     border-radius: 0 0 50px 50px;
+    z-index: -10;
 }
 
 .left-foot {
@@ -628,6 +635,7 @@
     left: 130px;
     transform: rotate(-25deg);
     animation: 5s linear infinite move;
+    z-index: -3;
 }
 
 @keyframes wave {
@@ -668,26 +676,26 @@
     text-align: center;
     display:flex;
     flex-wrap: wrap;
-    width: 15rem;
+    width: 22rem;
     justify-content: center;
 }
 
 .shape {
     background: linear-gradient(45deg, #88D5BF 0%, #f8f05d 100%);
-  animation: morph 8s ease-in-out infinite;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  height: 300px;
-  transition: all 1s ease-in-out;
-  width: 300px;
-  z-index: 5;
-  padding: 20px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-  top: 400px;
-  left: 250px
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 300px;
+    transition: all 1s ease-in-out;
+    width: 370px;
+    z-index: 5;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 300px;
 }
 
 @keyframes morph {
@@ -718,7 +726,7 @@
     color: black;
     cursor: pointer;
     display: block;
-    font-size:18px;
+    font-size:16px;
     font-weight: 400;
     line-height: 45px;
     margin: 10px;
@@ -734,16 +742,16 @@
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-  .b:hover {
+.b:hover {
     border: 1px solid;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 10px;
     text-shadow: 1px 1px 2px #427388; 
-  }
+}
 
-  
-  .form {
+/* Naming form*/
+.form {
     position: absolute;
     margin: 150px auto 0;
     width: 300px;
@@ -901,6 +909,8 @@
       opacity: 0;
     }
   }
+
+
 
 
 /* Cat location */
