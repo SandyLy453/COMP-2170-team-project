@@ -757,7 +757,7 @@ body {
     width: 300px;
     z-index:99;
     top: 100px;
-    left: 70rem;
+    left: 85rem;
     display:flex;
     flex-direction: column;
   }

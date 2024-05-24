@@ -5,16 +5,9 @@ const tailColors = ["black", "gray", "pink", "#993300", "orange"];
 const frontLegColors = ["black", "#5c5c3d", "#993300", "#000066"];
 const backLegColors = ["black", "#5c5c3d", "#993300", "#000066"];
 const faceColors = ["black", "#5c5c3d", "#993300", "#000066"];
-/*
-const accessories = [
-    "url_to_acc1_image",
-    "url_to_acc2_image",
-    "url_to_acc3_image",
-    "url_to_acc4_image"
-]; */
 
+// change colors
 
-//
 function changeEars() {
     let currentIndex = Math.floor(Math.random() * earColors.length);    
     document.querySelectorAll(".left-ear, .right-ear").forEach((ear) => {
