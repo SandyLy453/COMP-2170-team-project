@@ -669,7 +669,6 @@ body {
     text-align: center;
     position: relative;
     bottom:0;
-    font-family: 'Cinzel Decorative', cursive;
     font-size:30px;
 }
 
@@ -758,7 +757,7 @@ body {
     width: 300px;
     z-index:99;
     top: 100px;
-    left: 70rem;
+    left: 85rem;
     display:flex;
     flex-direction: column;
   }
