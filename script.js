@@ -107,14 +107,7 @@ saveButton.addEventListener('click', function (e) {
     input.classList.remove('focus');
 });
 
-// show introduction
-
-
-
-
 const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
-
-
 
 /* music player */
 var audioPlayer = document.querySelector('.green-audio-player');
@@ -145,11 +138,18 @@ function makePlay() {
     loading.style.display = 'none';
 }
 
+// show introduction
+
 const changeText = document.querySelector("#change-text");
+const originalMessage = changeText.textContent;
 changeText.addEventListener("click", function() {
     changeText.textContent = "Hello, meow! Welcome to the delightful world of the Cat Dress-Up Game! In this charming and interactive game, you have the chance to let your creativity shine by customizing a cute cat's appearance."
+    setTimeout(original, 60000);
 })
 
+function original() {
+    changeText.textContent = originalMessage;
+}
 
 
 
