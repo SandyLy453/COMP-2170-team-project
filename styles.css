@@ -872,20 +872,21 @@ body {
   }
 
   #displayName {
-    margin-top: 100px;
+    margin-top: 0;
     font-family: monospace;
     font-size: 20pt;
     display:block;
     position: absolute;
     top:10rem;
-    left: 62rem;
+    left: 65rem;
     text-transform: uppercase ;
   }
 
 .save{
     display: none;
     position:relative;
-    margin-top: 6rem;
+    margin-top: 7rem;
+    margin-left: 16rem;
     padding-top: 2rem;
     color:black;
     border: none;
@@ -901,6 +902,7 @@ body {
   
   &:active {
     transform: translateY(1px);
+   
   }
 
     &:focus {
@@ -932,6 +934,7 @@ body {
     position: absolute;
     top: 15rem;
     left: 0rem;
+    margin-top: 9rem;
 }
 
 .audio.green-audio-player {
