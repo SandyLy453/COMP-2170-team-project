@@ -10,6 +10,7 @@ body {
     outline: none;
     border: none;
     padding: 0;
+    font-family: 'Cinzel Decorative', cursive;
   }
 
 .main-area {
@@ -687,7 +688,7 @@ body {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     height: 300px;
     transition: all 1s ease-in-out;
-    width: 370px;
+    width: 350px;
     z-index: 5;
     padding: 20px;
     text-align: center;
@@ -799,11 +800,24 @@ body {
   }
   
   .label{
-    font-family: monospace;
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 16pt;
     display: block;
+    margin-top: 20px;
     margin-bottom: 15px;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
   }
+
+  .label-background {
+    background: linear-gradient(45deg, #88D5BF 0%, #f8f05d 100%);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 60px;
+    width: 150px;
+  }
+
   .open {
     background: rgba(255, 255, 255, 1);
     position: absolute;
@@ -910,6 +924,17 @@ body {
     }
   }
 
+/* change text */
+
+#change-text {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    right: 10vw;
+    top: 17vh;
+    z-index: -9;
+}
+
 
 
 
@@ -940,7 +965,3 @@ body {
         left: 0vw;
     }
 }
-
-
-
-

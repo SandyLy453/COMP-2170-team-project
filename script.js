@@ -106,7 +106,12 @@ saveButton.addEventListener('click', function (e) {
     input.classList.remove('focus');
 });
 
+// show introduction
 
+const changeText = document.querySelector("#change-text");
+changeText.addEventListener("click", function() {
+    changeText.textContent = "Hello, meow! Welcome to the delightful world of the Cat Dress-Up Game! In this charming and interactive game, you have the chance to let your creativity shine by customizing a cute cat's appearance."
+})
 
 
 const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
