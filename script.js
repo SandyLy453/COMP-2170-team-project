@@ -66,6 +66,7 @@ function changeFrontLegs() {
     });
 }
 
+/* form */
 
 var input = document.querySelector('.form');
 var search = document.querySelector('input');
@@ -107,6 +108,34 @@ saveButton.addEventListener('click', function (e) {
 });
 
 
+/* music player */
+var audioPlayer = document.querySelector('.green-audio-player');
+var playPause = audioPlayer.querySelector('#playPause');
+var playpauseBtn = audioPlayer.querySelector('.play-pause-btn');
+var loading = audioPlayer.querySelector('.loading');
+var player = audioPlayer.querySelector('audio');
+
+playpauseBtn.addEventListener('click', togglePlay);
+player.addEventListener('canplay', makePlay);
+player.addEventListener('ended', function(){
+    playPause.attributes.d.value = "M18 12L0 24V0";
+    player.currentTime = 0;
+});
+
+function togglePlay() {
+    if (player.paused) {
+        playPause.attributes.d.value = "M0 0h6v24H0zM12 0h6v24h-6z";
+        player.play();
+    } else {
+        playPause.attributes.d.value = "M18 12L0 24V0";
+        player.pause();
+    }
+}
+
+function makePlay() {
+    playpauseBtn.style.display = 'block';
+    loading.style.display = 'none';
+}
 
 
 const shirts = ["shirt1","shirt2","shirt3","shirt4", "shirt5"]
