@@ -7,7 +7,8 @@
 - Download the zip folder
 - Drag it into the visual studio code
 - Click on Go Live which is located in the right bottom corner
-- After the live session runs, the user is able to play the cat dress-up game.
+- After the live session runs, set the responsive media query by 1440px × 900px.
+- The user is able to play the cat dress-up game.
 - This game includes customized buttons for changing the cat's colors, a customized naming form, a music player and a clickable game introduction.
 
 ## Team member:
